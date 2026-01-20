@@ -6,24 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Noto Sans Thai", sans-serif;
-  background: #f7f7f7;
-  color: #323233;
   scroll-behavior: smooth;
-}
-
-@theme {
-  --color-accent: #c61b28;
-  --color-background: #f7f7f7;
-  --color-primary: #323233;
-}
-
-@custom-variant dark (&:where(.dark, .dark *));
-
-@layer base {
-  .dark {
-    --color-background: #000000;
-    --color-primary: #ffffff;
-  }
 }
 
 @layer utilities {
@@ -70,6 +53,9 @@ body {
 }
 
 @theme inline {
+  --color-accent: #c61b28;
+  --color-ball-white: var(--ball-white);
+  --color-primary: #323233;
   --animate-marquee: marquee var(--duration) infinite linear;
   --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
   --color-sidebar-ring: var(--sidebar-ring);
@@ -110,20 +96,24 @@ body {
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
+
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
+
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
 }
@@ -161,6 +151,7 @@ body {
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --ball-white: #f7f7f7;
 }
 
 .dark {
@@ -201,7 +192,8 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-ball-white text-foreground;
   }
 }
