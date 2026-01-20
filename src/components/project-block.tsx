@@ -9,7 +9,7 @@ function Project({ title, description, URL, github, skill }: { title: string, de
                 href={URL}
                 target='_blank'
                 rel="noopener noreferrer"
-                className="block p-6 rounded-xl border min-h-[20rem] border-primary/20 
+                className="block p-6 rounded-xl border min-h-[22rem] border-primary/20 
                     hover:-translate-y-1 hover:border-primary/60 
                     hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] 
                     transition-all duration-300
