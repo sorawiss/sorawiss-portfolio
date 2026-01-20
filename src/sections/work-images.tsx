@@ -31,9 +31,8 @@ const projects = [
 function WorkImages() {
     return (
 
-        <div className="container mx-auto px-4 py-24">
-            <div className="mb-16 flex flex-col items-start border-t-2 border-black pt-8">
-                <h2 className="text-6xl font-black uppercase tracking-tighter md:text-8xl">Selected Works</h2>
+        <div className="container mx-auto px-4 ">
+            <div className="mb-4 flex flex-col items-start pt-8">
                 <p className="mt-4 max-w-xl text-lg text-gray-600">
                     A curation of projects emphasizing structure, typography, and negative space.
                 </p>
