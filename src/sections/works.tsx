@@ -34,7 +34,7 @@ const works = [
 
 export default function Works() {
   return (
-    <div className="container relative flex w-full flex-col items-center justify-center overflow-hidden py-12">
+    <div id="projects" className="container relative flex w-full flex-col items-center justify-center overflow-hidden py-12">
       <div className="mb-24 text-center">
         <h1 className="text-4xl font-bold">My Works</h1>
       </div>
@@ -42,7 +42,7 @@ export default function Works() {
       <Marquee pauseOnHover className="[--duration:30s]">
         {works.map((work) => (
           <div key={work.name} className="mx-8 flex items-center justify-center opacity-50 hover:opacity-100 
-          ransition-opacity duration-300 grayscale hover:grayscale-0">
+          ransition-opacity duration-300 grayscale hover:grayscale-0 cursor-pointer ">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={work.img}
