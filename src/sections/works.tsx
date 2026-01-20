@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils"
 import { Marquee } from "@/components/ui/marquee"
 
 const works = [
@@ -31,6 +30,7 @@ const works = [
     img: "/works/driveddev.svg",
   },
 ]
+
 
 export default function Works() {
   return (

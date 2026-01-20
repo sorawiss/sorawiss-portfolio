@@ -4,6 +4,7 @@ import { Contact } from '../sections/contact'
 import { About } from '../sections/about-me'
 import Works from '../sections/works'
 import PersonalProjects from '../sections/personal-projects'
+import WorkImages from '../sections/work-images'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Home />
       <About />
       <Works />
+      <WorkImages />
       <PersonalProjects />
       <Contact />
     </div>
