@@ -233,11 +233,28 @@ export const Terminal = ({
       )}
     >
       <div className="border-border flex flex-col gap-y-2 border-b p-4">
-        <div className="flex flex-row gap-x-2">
-          <div className="h-2 w-2 rounded-full bg-red-500"></div>
-          <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
-          <div className="h-2 w-2 rounded-full bg-green-500"></div>
+        <div className="flex flex-row justify-between items-center">
+
+          <div className="flex flex-row gap-x-2">
+            <div className="h-2 w-2 rounded-full bg-red-500"></div>
+            <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
+            <div className="h-2 w-2 rounded-full bg-green-500"></div>
+          </div>
+
+          <div className="Button flex text-[0.7rem] w-fit gap-2 ">
+            <a target="_blank" href="https://drive.google.com/file/d/1wAcdu-XST-tuQr7pqVepPuQ5QMV4CLSh/view?usp=sharing" className="px-1 py-1 w-15 border 
+            border-primary/20 rounded-xl cursor-pointer  hover:bg-gray-300 dark:hover:bg-gray-500 transition-all duration-300 ">
+              Resume
+            </a>
+
+            <a href="https://github.com/sorawiss" className="px-1 py-1 w-15 h-fit border border-primary/20 rounded-xl 
+            cursor-pointer  hover:bg-gray-300 dark:hover:bg-gray-500 transition-all duration-300 ">
+              GitHub
+            </a>
+          </div>
         </div>
+
+
       </div>
       <pre className="p-4">
         <code className="grid gap-y-1 overflow-auto">{wrappedChildren}</code>
