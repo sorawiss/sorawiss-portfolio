@@ -3,6 +3,7 @@ import { Navbar } from '../sections/navbar'
 import { Contact } from '../sections/contact'
 import { About } from '../sections/about-me'
 import Works from '../sections/works'
+import PersonalProjects from '../sections/personal-projects'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <Home />
       <About />
       <Works />
+      <PersonalProjects />
       <Contact />
     </div>
   )

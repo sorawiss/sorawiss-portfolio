@@ -52,6 +52,10 @@ body {
   transform: translateY(0);
 }
 
+h1 {
+  @apply text-5xl md:text-7xl font-bold;
+}
+
 @theme inline {
   --color-accent: #c61b28;
   --color-ball-white: var(--ball-white);
