@@ -15,7 +15,7 @@ function Project({ title, description, URL, github, skill }: { title: string, de
                     transition-all duration-300
                     no-underline text-inherit"
             >
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary/80 transition-colors">
+                <h3 className="text-xl font-bold mb-2 group-hover:text-ball-primary/80 transition-colors">
                     {title}
                 </h3>
                 <p className="text-gray-400 mb-4">

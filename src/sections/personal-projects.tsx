@@ -11,6 +11,7 @@ export default function PersonalProjects() {
       className="min-h-screen flex items-center justify-center py-[8rem]"
     >
       <div className="max-w-5xl mx-auto px-4 w-full">
+        <h3 className="text-2xl font-bold text-center mb-8 text-ball-primary/80  ">Personal Projects</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <AnimatedBackground
             className='rounded-xl bg-zinc-200/70 dark:bg-zinc-800'
