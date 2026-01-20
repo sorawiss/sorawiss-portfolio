@@ -64,14 +64,12 @@ export const RevealOnScroll = ({
   variant = "fadeInUp",
   delay = 0,
   className = "",
-  threshold = 1,
   once = false
 }: {
     children: React.ReactNode;
     variant?: keyof typeof variants;
     delay?: number;
     className?: string;
-    threshold?: number;
     once?: boolean;
 }) => {
   return (

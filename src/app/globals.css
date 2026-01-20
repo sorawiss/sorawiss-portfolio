@@ -39,6 +39,10 @@ body {
   .animate-loading-bar {
     animation: loading 0.8s ease infinite;
   }
+
+  h2 {
+    @apply text-4xl font-bold ;
+  }
 }
 
 .reveal {

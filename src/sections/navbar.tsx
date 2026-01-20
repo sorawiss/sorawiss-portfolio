@@ -21,10 +21,10 @@ export const Navbar = () => {
 
 
     return (
-        <nav className="fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
+        <nav className="fixed top-0 w-full z-50 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
             <div className="max-w-5xl mx-auto px-4">
                 <div className="flex justify-between items-center h-16">
-                    <a href="#home" className="font-mono text-xl font-bold text-primary">
+                    <a href="#home" className="font-mono text-xl font-bold text-ball-primary">
                         sorawiss
                     </a>
 
@@ -33,7 +33,7 @@ export const Navbar = () => {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="text-primary hover:opacity-50 transition-opacity duration-300"
+                                className="text-ball-primary hover:opacity-50 transition-opacity duration-300"
                             >
                                 {link.name}
                             </a>

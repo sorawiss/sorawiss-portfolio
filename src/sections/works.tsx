@@ -35,7 +35,7 @@ const works = [
 export default function Works() {
   return (
     <div id="projects" className="container relative flex w-full flex-col items-center justify-center overflow-hidden py-12">
-      <div className="mb-24 text-center">
+      <div className="mb-4 text-center">
         <h2 className="text-4xl font-bold">My Works</h2>
       </div>
 

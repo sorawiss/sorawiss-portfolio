@@ -14,7 +14,7 @@ export const About = () => {
                     </h2>
 
                     <div className="rounded-xl p-8 border-primary/20 border hover:-translate-y-1 transition-all hover:border-primary/60 ">
-                        <p className="text-primary/70 mb-6 text-center ">
+                        <p className="text-ball-primary/70 mb-6 text-center ">
                             Second-year student in Computer Science and Political Science with interests
                             in engineering, user experience design, social sciences, and psychology.
                             Passionate about understanding how people interact with technology, and designing systems that are both
@@ -27,7 +27,7 @@ export const About = () => {
                     {/* <div className="flex flex-col mt-8">
                         <div className="p-6 rounded-xl border-primary/0 border">
                             <h3 className="text-xl font-bold mb-4">Education</h3> {/* Translate education title
-                            <ul className="list-disc list-inside text-primary/60 space-y-2">
+                            <ul className="list-disc list-inside text-ball-primary/60 space-y-2">
                                 <li>
                                     <strong>Computer Science</strong> 3rd year student at Thammasat University <strong>GPA 3.66</strong>
                                 </li>
