@@ -16,8 +16,8 @@ function App() {
       <Home />
       <About />
       <Works />
-      <WorkImages />
       <PersonalProjects />
+      <WorkImages />
       <Contact />
     </div>
   )
