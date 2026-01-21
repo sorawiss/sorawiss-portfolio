@@ -57,14 +57,14 @@ import { RevealOnScroll } from "../components/reveal-onscroll"
 function WorkImages() {
     return (
         <div className="container mx-auto px-4 ">
-            <div className="mb-24 mt-10 flex flex-col items-start pt-12 border-t border-black/10">
+            <div className="mb-16 mt-10 flex flex-col items-start pt-12 border-t border-black/10">
                 <RevealOnScroll>
-                    <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-[0.8]">
+                    <h2 className="uppercase tracking-tighter leading-[0.8]">
                         Gallery
                     </h2>
                 </RevealOnScroll>
                 <RevealOnScroll delay={0.2}>
-                    <p className="mt-8 max-w-xl text-lg md:text-xl font-medium text-gray-500 leading-relaxed">
+                    <p className="text-ball-primary/60 max-w-[30rem]  leading-relaxed">
                         A collection of my work presented through visuals, including UI designs, layouts, and creative projects.
                     </p>
                 </RevealOnScroll>
