@@ -57,6 +57,7 @@ const projects = [
 
 
 import { RevealOnScroll } from "../components/reveal-onscroll"
+import Image from "next/image"
 
 function WorkImages() {
     return (
@@ -90,11 +91,9 @@ function WorkImages() {
                                 {/* Mockup Placeholder */}
                                 <div className="absolute inset-0 flex items-center justify-center text-gray-400 group-hover:text-gray-900 
                                 transition-colors duration-500">
-                                    {project.image ? (
-                                        <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-                                    ) : (
-                                        <span className="text-sm font-medium uppercase tracking-[0.2em]">Image Mockup</span>
-                                    )}
+
+                                    <Image src={project.image} alt={project.title} className="w-full h-full object-cover" />
+
                                 </div>
                             </div>
 
