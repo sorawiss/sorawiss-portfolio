@@ -8,7 +8,7 @@ export default function PersonalProjects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center py-[8rem]"
+      className="min-h-screen flex items-center justify-center py-[6rem]"
     >
       <div className="max-w-5xl mx-auto px-4 w-full">
         {/* <h3 className="text-2xl font-bold text-center mb-8 text-ball-primary/80  ">Personal Projects</h3> */}

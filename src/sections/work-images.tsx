@@ -57,24 +57,22 @@ import { RevealOnScroll } from "../components/reveal-onscroll"
 function WorkImages() {
     return (
         <div className="container mx-auto px-4 ">
-            <div className="mb-24 flex flex-col items-start pt-12 border-t border-black/10">
+            <div className="mb-24 mt-10 flex flex-col items-start pt-12 border-t border-black/10">
                 <RevealOnScroll>
-                    <h2 className="text-6xl md:text-9xl font-black uppercase tracking-tighter leading-[0.8]">
-                        Selected <br /> Works
+                    <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter leading-[0.8]">
+                        Gallery
                     </h2>
                 </RevealOnScroll>
                 <RevealOnScroll delay={0.2}>
                     <p className="mt-8 max-w-xl text-lg md:text-xl font-medium text-gray-500 leading-relaxed">
-                        A curation of projects emphasizing structure, typography, and negative space.
+                        A collection of my work presented through visuals, including UI designs, layouts, and creative projects.
                     </p>
                 </RevealOnScroll>
             </div>
 
             <div className="grid grid-cols-1 gap-x-12 gap-y-24 md:grid-cols-2 items-start auto-rows-min">
                 {projects.map((project, index) => (
-                    <RevealOnScroll
-                        key={project.id}
-                        delay={index * 0.1}
+                    <div
                         className={cn(
                             project.orientation === "horizontal" ? "md:col-span-2" : "",
                             index % 2 === 1 && project.orientation === "vertical" ? "md:mt-32" : ""
@@ -108,7 +106,7 @@ function WorkImages() {
                                 </span>
                             </div>
                         </div>
-                    </RevealOnScroll>
+                    </div>
                 ))}
             </div>
         </div>

@@ -21,7 +21,7 @@ export const Home = () => {
 
         <RevealOnScroll variant="fadeInUp" delay={0.4}>
           <Terminal className="w-full min-h-[15rem] h-auto bg-ball-white mb-4 cursor-default ">
-            <AnimatedSpan>"At the intersection of code, design, and the human</AnimatedSpan>
+            <TypingAnimation>"At the intersection of code, design, and the human</TypingAnimation>
             <TypingAnimation>experience. I'm driven by a desire to build systems that are</TypingAnimation>
             <TypingAnimation>both technically sound and emotionally intelligent."</TypingAnimation>
 

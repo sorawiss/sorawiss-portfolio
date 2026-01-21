@@ -91,7 +91,7 @@ interface TypingAnimationProps extends MotionProps {
 export const TypingAnimation = ({
   children,
   className,
-  duration = 60,
+  duration = 40,
   delay = 0,
   as: Component = "span",
   startOnView = true,
@@ -247,7 +247,7 @@ export const Terminal = ({
               Resume
             </a>
 
-            <a href="https://github.com/sorawiss" className="px-1 py-1 w-15 h-fit border border-primary/20 rounded-xl 
+            <a target="_blank" href="https://github.com/sorawiss" className="px-1 py-1 w-15 h-fit border border-primary/20 rounded-xl 
             cursor-pointer  hover:bg-gray-300 dark:hover:bg-gray-500 transition-all duration-300 ">
               GitHub
             </a>
