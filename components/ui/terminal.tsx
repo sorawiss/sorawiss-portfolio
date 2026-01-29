@@ -242,7 +242,7 @@ export const Terminal = ({
           </div>
 
           <div className="Button flex text-[0.7rem] w-fit gap-2 ">
-            <a target="_blank" href="https://drive.google.com/file/d/1dtdURD7LZowLGnBdEDt1zApca0DXOwV1/view?usp=sharing" className="px-1 py-1 w-15 border 
+            <a target="_blank" href="https://drive.google.com/file/d/1vd1Oh_SWzoe4ckwf87BmasOd4Rcxnf5o/view?usp=sharing" className="px-1 py-1 w-15 border 
             border-primary/20 rounded-xl cursor-pointer  hover:bg-gray-300 dark:hover:bg-gray-500 transition-all duration-300 ">
               Resume
             </a>
