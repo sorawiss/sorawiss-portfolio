@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans_Thai } from "next/font/google";
+import { IBM_Plex_Mono, Noto_Sans_Thai, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import SmoothScrolling from "@/src/components/smooth-scrolling";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
   subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 const notoSansThai = Noto_Sans_Thai({
@@ -32,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${notoSansThai.className}  antialiased`}
+        className={`${spaceGrotesk.variable} ${ibmPlexMono.variable} ${notoSansThai.variable} ${notoSansThai.className} antialiased`}
       >
         <SmoothScrolling>{children}</SmoothScrolling>
       </body>

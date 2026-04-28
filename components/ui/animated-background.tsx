@@ -5,9 +5,8 @@ import {
   Children,
   cloneElement,
   ReactElement,
-  useEffect,
-  useState,
   useId,
+  useState,
 } from 'react';
 
 type AnimatedBackgroundProps = {
@@ -29,7 +28,7 @@ export default function AnimatedBackground({
   transition,
   enableHover = false,
 }: AnimatedBackgroundProps) {
-  const [activeId, setActiveId] = useState<string | null>(null);
+  const [activeId, setActiveId] = useState<string | null>(defaultValue ?? null);
   const uniqueId = useId();
 
   const handleSetActiveId = (id: string | null) => {
@@ -40,14 +39,13 @@ export default function AnimatedBackground({
     }
   };
 
-  useEffect(() => {
-    if (defaultValue !== undefined) {
-      setActiveId(defaultValue);
-    }
-  }, [defaultValue]);
-
-  return Children.map(children, (child: any, index) => {
-    const id = child.props['data-id'];
+  return Children.map(children, (child, index) => {
+    const typedChild = child as ReactElement<{
+      'data-id': string;
+      className?: string;
+      children?: React.ReactNode;
+    }>;
+    const id = typedChild.props['data-id'];
 
     const interactionProps = enableHover
       ? {
@@ -62,7 +60,7 @@ export default function AnimatedBackground({
       child,
       {
         key: index,
-        className: cn('relative inline-flex', child.props.className),
+        className: cn('relative inline-flex', typedChild.props.className),
         'aria-selected': activeId === id,
         'data-checked': activeId === id ? 'true' : 'false',
         ...interactionProps,
@@ -84,7 +82,7 @@ export default function AnimatedBackground({
             />
           )}
         </AnimatePresence>
-        <span className='z-10'>{child.props.children}</span>
+        <span className='z-10'>{typedChild.props.children}</span>
       </>
     );
   });

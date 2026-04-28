@@ -1,45 +1,43 @@
 import { RevealOnScroll } from "../components/reveal-onscroll";
 import Project from "../components/project-block";
-import AnimatedBackground from '@/components/ui/animated-background';
-
 import projectData from "../store/project-data";
 
 export default function PersonalProjects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex items-center justify-center py-[6rem]"
+      className="page-shell py-20 md:py-28"
     >
-      <div className="max-w-5xl mx-auto px-4 w-full">
-        {/* <h3 className="text-2xl font-bold text-center mb-8 text-ball-primary/80  ">Personal Projects</h3> */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <AnimatedBackground
-            className='rounded-xl bg-zinc-200/70 dark:bg-zinc-800'
-            transition={{
-              type: 'spring',
-              bounce: 0.2,
-              duration: 0.6,
-            }}
-            enableHover
-          >
-            {projectData.map((items, index) => (
-              <div key={items.id} data-id={`card-${index}`}>
-                <RevealOnScroll
-                  variant={index % 2 === 0 ? "fadeInLeft" : "fadeInRight"}
-                  delay={1 + (index * 0.2)}
-                  className="h-full"
-                >
-                  <Project
-                    title={items.title}
-                    description={items.description}
-                    URL={items.URL}
-                    github={items.github}
-                    skill={items.skill}
-                  />
-                </RevealOnScroll>
-              </div>
-            ))}
-          </AnimatedBackground>
+      <div className="swiss-grid grid-rule pt-8">
+        <div className="md:col-span-4">
+          <p className="section-kicker">Independent Projects</p>
+          <h2 className="section-title mt-4">
+            Built
+            <span className="block text-ball-primary/25">outside class</span>
+          </h2>
+          <p className="section-copy mt-6 max-w-sm">
+            A selection of concepts, experiments, and product systems spanning full-stack,
+            interface design, and machine learning.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-6 md:col-span-8 md:grid-cols-2">
+          {projectData.map((items, index) => (
+            <RevealOnScroll
+              key={items.id}
+              variant={index % 2 === 0 ? "fadeInLeft" : "fadeInRight"}
+              delay={0.1 + (index * 0.1)}
+              className="h-full"
+            >
+              <Project
+                title={items.title}
+                description={items.description}
+                URL={items.URL}
+                github={items.github}
+                skill={items.skill}
+              />
+            </RevealOnScroll>
+          ))}
         </div>
       </div>
     </section>

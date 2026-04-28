@@ -1,46 +1,56 @@
 'use client'
+
 import Skill from "./project-skills"
 
-
-function Project({ title, description, URL, github, skill }: { title: string, description: string, URL: string, github?: string, skill: string[] }) {
+function Project({
+    title,
+    description,
+    URL,
+    github,
+    skill,
+}: {
+    title: string
+    description: string
+    URL: string
+    github?: string
+    skill: string[]
+}) {
     return (
-        <div className="group">
+        <div className="group h-full">
             <a
                 href={URL}
-                target='_blank'
+                target="_blank"
                 rel="noopener noreferrer"
-                className="block p-6 rounded-xl border min-h-[22rem] border-primary/20 
-                    hover:-translate-y-1 hover:border-primary/60 
-                    hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] 
-                    transition-all duration-300
-                    no-underline text-inherit"
+                className="editorial-card flex h-full min-h-[24rem] flex-col justify-between p-6 transition-transform duration-300 hover:-translate-y-1"
             >
-                <h3 className="text-xl font-bold mb-2 group-hover:text-ball-primary/80 transition-colors">
-                    {title}
-                </h3>
-                <p className="text-gray-400 mb-4">
-                    {description}
-                </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                    {skill && skill.map((items) => (
-                        <Skill key={items} tech={items} />
-                    ))}
+                <div>
+                    <span className="display-index">Project</span>
+                    <h3 className="mt-4 max-w-md text-2xl font-medium uppercase leading-tight tracking-[-0.06em] text-ball-primary transition-colors group-hover:text-ball-accent md:text-3xl">
+                        {title}
+                    </h3>
+                    <p className="mt-4 text-sm leading-7 text-ball-primary/70">
+                        {description}
+                    </p>
+                    <div className="mt-6 flex flex-wrap gap-2">
+                        {skill.map((items) => (
+                            <Skill key={items} tech={items} />
+                        ))}
+                    </div>
                 </div>
 
-                <div className="flex gap-2 items-center">
-                    <span className="text-primary groupa-hover:text-primary/80 transition-colors my-4">
-                        View Project →
+                <div className="mt-10 flex flex-wrap items-center gap-4 border-t border-black/10 pt-4">
+                    <span className="text-sm uppercase tracking-[0.18em] text-ball-primary">
+                        View Project
                     </span>
                     {github && (
                         <a
                             href={github}
-                            target='_blank'
+                            target="_blank"
                             rel="noopener noreferrer"
-                            className="text-primary hover:text-primary/80 transition-colors my-4 
-                                no-underline hover:no-underline"
-                            onClick={(e) => e.stopPropagation()} // Prevent card click when clicking GitHub
+                            className="text-sm uppercase tracking-[0.18em] text-ball-primary/55 transition-colors hover:text-ball-primary"
+                            onClick={(e) => e.stopPropagation()}
                         >
-                            github
+                            GitHub
                         </a>
                     )}
                 </div>

@@ -1,47 +1,54 @@
 import { RevealOnScroll } from "../components/reveal-onscroll";
 
 export const About = () => {
-
     return (
         <section
             id="about"
-            className=" flex items-center justify-center py-[8rem]"
+            className="page-shell py-20 md:py-28"
         >
-            <RevealOnScroll>
-                <div className="max-w-3xl mx-auto px-4 cursor-default ">
-                    <h2 className="text-4xl font-bold mb-8 bg-gradient-to-r text-ball-primary bg-clip-text text-center">
-                        Who I am
-                    </h2>
+            <div className="swiss-grid grid-rule pt-8">
+                <RevealOnScroll className="md:col-span-4">
+                    <div className="space-y-4">
+                        <p className="section-kicker">About</p>
+                        <h2 className="section-title">
+                            Human-centered
+                            <span className="block text-ball-primary/25">systems</span>
+                        </h2>
+                    </div>
+                </RevealOnScroll>
 
-                    <div className="rounded-xl p-8 border-primary/20 border hover:-translate-y-1 transition-all hover:border-primary/60 ">
-                        <p className="text-ball-primary/70 mb-6 text-center ">
-                            Third-year student in Computer Science and Political Science with interests
-                            in engineering, user experience design, social sciences, and psychology.
-                            Passionate about understanding how people interact with technology, and designing systems that are both
-                            technically sound and human-centered.
+                <RevealOnScroll delay={0.15} className="md:col-span-8">
+                    <div className="editorial-card p-6 md:p-10">
+                        <p className="section-copy max-w-3xl">
+                            Third-year student in Computer Science and Political Science focused on the
+                            meeting point between engineering, interface design, and human behavior.
+                            I care about making products that feel rigorous in structure and clear in use,
+                            while still carrying emotional intelligence.
                         </p>
 
-                        {/* Skills section commented out */}
-                    </div>
-
-                    {/* <div className="flex flex-col mt-8">
-                        <div className="p-6 rounded-xl border-primary/0 border">
-                            <h3 className="text-xl font-bold mb-4">Education</h3> {/* Translate education title
-                            <ul className="list-disc list-inside text-ball-primary/60 space-y-2">
-                                <li>
-                                    <strong>Computer Science</strong> 3rd year student at Thammasat University <strong>GPA 3.66</strong>
-                                </li>
-                                <li>
-                                    <strong>Political Science</strong> 2nd year student at Ramkhamhaeng University <strong>GPA 3.71</strong>
-                                </li>
-                                <li>
-                                    <strong>Princess Chulabhorn Science High School</strong> (2017-2023) <strong>GPA 3.57</strong>
-                                </li>
-                            </ul>
+                        <div className="mt-10 grid gap-6 md:grid-cols-3">
+                            <div className="border-t border-black/10 pt-4">
+                                <p className="display-index mb-3">01 Discipline</p>
+                                <p className="text-sm leading-7 text-ball-primary/70">
+                                    Frontend engineering, product thinking, and interface systems.
+                                </p>
+                            </div>
+                            <div className="border-t border-black/10 pt-4">
+                                <p className="display-index mb-3">02 Interest</p>
+                                <p className="text-sm leading-7 text-ball-primary/70">
+                                    UX, social science, psychology, and how people trust technology.
+                                </p>
+                            </div>
+                            <div className="border-t border-black/10 pt-4">
+                                <p className="display-index mb-3">03 Approach</p>
+                                <p className="text-sm leading-7 text-ball-primary/70">
+                                    Use a clear grid, reduce noise, and let content carry the weight.
+                                </p>
+                            </div>
                         </div>
-                    </div> */}
-                </div>
-            </RevealOnScroll>
+                    </div>
+                </RevealOnScroll>
+            </div>
         </section>
     );
 };

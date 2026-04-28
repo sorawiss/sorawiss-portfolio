@@ -1,5 +1,4 @@
-export default [
-    
+const projectData = [
     {
         "id": "maibood",
         "title": "MaiBood",
@@ -32,3 +31,5 @@ export default [
         "github": "https://github.com/sorawiss/kbtg-hackathon"
     }
 ]
+
+export default projectData

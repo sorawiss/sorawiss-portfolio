@@ -54,65 +54,66 @@ const projects = [
     //     orientation: "vertical",
     // },
 ]
-
-
 import { RevealOnScroll } from "../components/reveal-onscroll"
 import Image from "next/image"
 
 function WorkImages() {
     return (
-        <div className="container mx-auto px-4 ">
-            <div className="mb-16 mt-10 flex flex-col items-start pt-12 border-t border-black/10">
-                <RevealOnScroll>
-                    <h2 className="uppercase tracking-tighter leading-[0.8]">
-                        Gallery
-                    </h2>
-                </RevealOnScroll>
-                <RevealOnScroll delay={0.2}>
-                    <p className="text-ball-primary/60 max-w-[30rem]  leading-relaxed">
-                        A collection of my work presented through visuals, including UI designs, layouts, and creative projects.
-                    </p>
-                </RevealOnScroll>
-            </div>
+        <section className="page-shell py-20 md:py-28">
+            <div className="swiss-grid grid-rule pt-8">
+                <div className="md:col-span-4">
+                    <RevealOnScroll>
+                        <p className="section-kicker">Visual Archive</p>
+                    </RevealOnScroll>
+                    <RevealOnScroll delay={0.12}>
+                        <h2 className="section-title mt-4">
+                            Gallery
+                            <span className="block text-ball-primary/25">in motion</span>
+                        </h2>
+                    </RevealOnScroll>
+                    <RevealOnScroll delay={0.2}>
+                        <p className="section-copy mt-6 max-w-sm">
+                            Interfaces, brand applications, and product visuals arranged with a stronger
+                            editorial rhythm.
+                        </p>
+                    </RevealOnScroll>
+                </div>
 
-            <div className="grid grid-cols-1 gap-x-12 gap-y-24 md:grid-cols-2 items-start auto-rows-min">
-                {projects.map((project, index) => (
-                    <div
-                        className={cn(
-                            project.orientation === "horizontal" ? "md:col-span-2" : "",
-                            index % 2 === 1 && project.orientation === "vertical" ? "md:mt-32" : ""
-                        )}
-                    >
-                        <a href={project.url} target="_blank" rel="noopener noreferrer" className="group flex flex-col gap-6 cursor-pointer">
-                            <div className={cn(
-                                "relative w-full overflow-hidden bg-gray-100 transition-all duration-700 ease-out group-hover:scale-[0.98]",
-                                project.orientation === "horizontal" ? "aspect-video" : "aspect-4/5"
-                            )}>
-                                {/* Mockup Placeholder */}
-                                <div className="absolute inset-0 flex items-center justify-center text-gray-400 group-hover:text-gray-900 
-                                transition-colors duration-500">
-
-                                    <Image src={project.image} alt={project.title} className="w-full h-full object-cover" />
-
+                <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:col-span-8 md:grid-cols-2">
+                    {projects.map((project, index) => (
+                        <RevealOnScroll
+                            key={project.id}
+                            delay={0.12 + index * 0.08}
+                            className={cn(
+                                project.orientation === "horizontal" ? "md:col-span-2" : "",
+                                index % 2 === 1 && project.orientation === "vertical" ? "md:translate-y-16" : ""
+                            )}
+                        >
+                            <a href={project.url} target="_blank" rel="noopener noreferrer" className="group flex flex-col gap-5">
+                                <div className={cn(
+                                    "relative overflow-hidden border border-black/10 bg-white/50 transition-transform duration-500 group-hover:scale-[0.985]",
+                                    project.orientation === "horizontal" ? "aspect-[16/9]" : "aspect-[4/5]"
+                                )}>
+                                    <Image src={project.image} alt={project.title} fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
                                 </div>
-                            </div>
 
-                            <div className="flex flex-col border-t border-black pt-4">
-                                <div className="flex justify-between items-baseline">
-                                    <h3 className="text-3xl md:text-5xl font-bold uppercase leading-none tracking-tighter group-hover:translate-x-2 transition-transform duration-300">
-                                        {project.title}
-                                    </h3>
-                                    <span className="text-sm font-mono text-gray-400">{project.year}</span>
+                                <div className="border-t border-black/10 pt-4">
+                                    <div className="flex items-start justify-between gap-4">
+                                        <h3 className="text-2xl font-medium uppercase leading-none tracking-[-0.06em] transition-colors duration-300 group-hover:text-ball-accent md:text-4xl">
+                                            {project.title}
+                                        </h3>
+                                        <span className="display-index">{project.year}</span>
+                                    </div>
+                                    <p className="mt-3 text-sm uppercase tracking-[0.18em] text-ball-primary/55">
+                                        {project.category}
+                                    </p>
                                 </div>
-                                <span className="mt-2 text-sm font-medium uppercase tracking-widest text-gray-500">
-                                    {project.category}
-                                </span>
-                            </div>
-                        </a>
-                    </div>
-                ))}
+                            </a>
+                        </RevealOnScroll>
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     )
 }
 

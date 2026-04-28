@@ -48,17 +48,11 @@ export const AnimatedSpan = ({
 
   const sequence = useSequence()
   const itemIndex = useItemIndex()
-  const [hasStarted, setHasStarted] = useState(false)
-  useEffect(() => {
-    if (!sequence || itemIndex === null) return
-    if (!sequence.sequenceStarted) return
-    if (hasStarted) return
-    if (sequence.activeIndex === itemIndex) {
-      setHasStarted(true)
-    }
-  }, [sequence?.activeIndex, sequence?.sequenceStarted, hasStarted, itemIndex])
-
-  const shouldAnimate = sequence ? hasStarted : startOnView ? isInView : true
+  const shouldAnimate = sequence
+    ? itemIndex !== null && sequence.sequenceStarted && sequence.activeIndex >= itemIndex
+    : startOnView
+      ? isInView
+      : true
 
   return (
     <motion.div
@@ -110,7 +104,6 @@ export const TypingAnimation = ({
   )
 
   const [displayedText, setDisplayedText] = useState<string>("")
-  const [started, setStarted] = useState(false)
   const elementRef = useRef<HTMLElement | null>(null)
   const isInView = useInView(elementRef as React.RefObject<Element>, {
     amount: 0.3,
@@ -119,56 +112,40 @@ export const TypingAnimation = ({
 
   const sequence = useSequence()
   const itemIndex = useItemIndex()
+  const canStart = sequence && itemIndex !== null
+    ? sequence.sequenceStarted && sequence.activeIndex === itemIndex
+    : startOnView
+      ? isInView
+      : true
 
   useEffect(() => {
-    if (sequence && itemIndex !== null) {
-      if (!sequence.sequenceStarted) return
-      if (started) return
-      if (sequence.activeIndex === itemIndex) {
-        setStarted(true)
-      }
-      return
-    }
-
-    if (!startOnView) {
-      const startTimeout = setTimeout(() => setStarted(true), delay)
-      return () => clearTimeout(startTimeout)
-    }
-
-    if (!isInView) return
-
-    const startTimeout = setTimeout(() => setStarted(true), delay)
-    return () => clearTimeout(startTimeout)
-  }, [
-    delay,
-    startOnView,
-    isInView,
-    started,
-    sequence?.activeIndex,
-    sequence?.sequenceStarted,
-    itemIndex,
-  ])
-
-  useEffect(() => {
-    if (!started) return
+    if (!canStart) return
 
     let i = 0
-    const typingEffect = setInterval(() => {
-      if (i < children.length) {
-        setDisplayedText(children.substring(0, i + 1))
-        i++
-      } else {
-        clearInterval(typingEffect)
-        if (sequence && itemIndex !== null) {
-          sequence.completeItem(itemIndex)
+    let typingEffect: ReturnType<typeof setInterval> | undefined
+    const startTimeout = setTimeout(() => {
+      typingEffect = setInterval(() => {
+        if (i < children.length) {
+          setDisplayedText(children.substring(0, i + 1))
+          i++
+        } else {
+          clearInterval(typingEffect)
+          if (sequence && itemIndex !== null) {
+            sequence.completeItem(itemIndex)
+          }
         }
-      }
-    }, duration)
+      }, duration)
+
+      return () => clearInterval(typingEffect)
+    }, delay)
 
     return () => {
-      clearInterval(typingEffect)
+      clearTimeout(startTimeout)
+      if (typingEffect) {
+        clearInterval(typingEffect)
+      }
     }
-  }, [children, duration, started])
+  }, [canStart, children, delay, duration, itemIndex, sequence])
 
   return (
     <MotionComponent

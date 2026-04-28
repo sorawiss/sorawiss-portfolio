@@ -4,48 +4,53 @@ export const Contact = () => {
     return (
         <section
             id="contact"
-            className="min-h-screen flex items-center justify-center p-4"
+            className="page-shell py-20 md:py-28"
         >
-            <RevealOnScroll delay={0.2}>
-                <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-start">
-                    {/* Left Column: Heading */}
-                    <div className="md:col-span-1">
-                        <h1 className="text-5xl  font-bold tracking-tighter leading-[0.9] text-ball-primary mb-8">
-                            Let's <br />
-                            Connect
-                        </h1>
+            <div className="swiss-grid grid-rule items-start pt-8">
+                <RevealOnScroll className="md:col-span-5">
+                    <div className="space-y-5">
+                        <p className="section-kicker">Contact</p>
+                        <h2 className="section-title">
+                            Let&apos;s
+                            <span className="block text-ball-primary/25">connect</span>
+                        </h2>
+                        <p className="section-copy max-w-md">
+                            Open to thoughtful freelance work, collaborations, and product conversations.
+                        </p>
                     </div>
+                </RevealOnScroll>
 
-                    {/* Right Column: Details */}
-                    <div className="md:col-span-1 flex flex-col justify-between h-full space-y-12 pt-4">
-                        <div className="space-y-2">
-                            <p className="text-sm uppercase tracking-widest text-ball-primary/60 font-medium">
-                                Email
-                            </p>
-                            <a
-                                href="mailto:sorawit.bunnee@gmail.com"
-                                className="cursor-pointer text-2xl md:text-3xl font-light text-ball-primary hover:text-ball-primary/70 transition-colors block decoration-1 underline-offset-4 hover:underline"
-                            >
-                                sorawit.bunnee@gmail.com
-                            </a>
+                <RevealOnScroll delay={0.15} className="md:col-span-7">
+                    <div className="editorial-card p-6 md:p-8">
+                        <div className="label-row border-t-0 py-0 pb-5">
+                            <span>Reach Out</span>
+                            <span>Bangkok, Thailand</span>
                         </div>
 
-                        <div className="space-y-2">
-                            <p className="text-sm uppercase tracking-widest text-ball-primary/60 font-medium">
-                                Phone
-                            </p>
-                            <a
-                                href="tel:+66611607708"
-                                className="cursor-pointer text-2xl md:text-3xl font-light text-ball-primary hover:text-ball-primary/70 transition-colors block decoration-1 underline-offset-4 hover:underline"
-                            >
-                                (+66) 611607708
-                            </a>
-                        </div>
+                        <div className="space-y-8">
+                            <div className="border-t border-black/10 pt-5">
+                                <p className="display-index mb-3">Email</p>
+                                <a
+                                    href="mailto:sorawit.bunnee@gmail.com"
+                                    className="text-2xl font-medium tracking-[-0.05em] transition-colors hover:text-ball-accent md:text-4xl"
+                                >
+                                    sorawit.bunnee@gmail.com
+                                </a>
+                            </div>
 
-                     
+                            <div className="border-t border-black/10 pt-5">
+                                <p className="display-index mb-3">Phone</p>
+                                <a
+                                    href="tel:+66611607708"
+                                    className="text-2xl font-medium tracking-[-0.05em] transition-colors hover:text-ball-accent md:text-4xl"
+                                >
+                                    (+66) 611 607 708
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </RevealOnScroll>
+                </RevealOnScroll>
+            </div>
         </section>
     );
 };

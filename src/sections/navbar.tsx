@@ -1,45 +1,42 @@
 'use client'
 import { useEffect, useState } from "react";
 
-
 const navLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Works", href: "#projects" },
+    { name: "Works", href: "#selected-work" },
+    { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
 ]
 
-
 export const Navbar = () => {
-
     const [menuOpen, setMenuOpen] = useState<boolean>(false)
 
     useEffect(() => {
         document.body.style.overflow = menuOpen ? "hidden" : "";
     }, [menuOpen]);
 
-
     return (
-        <nav className="fixed top-0 w-screen z-50 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-white/10 shadow-lg">
-            <div className=" container mx-auto px-4">
-                <div className="flex justify-between items-center h-16">
-                    <a href="#home" className="font-mono text-xl font-bold text-ball-primary">
-                        sorawiss
+        <nav className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-ball-white/80 backdrop-blur-xl">
+            <div className="page-shell">
+                <div className="flex h-16 items-center justify-between">
+                    <a href="#home" className="font-mono text-xs uppercase tracking-[0.3em] text-ball-primary">
+                        Sorawiss
                     </a>
 
                     <div
-                        className="w-7 h-5 relative cursor-pointer z-50 md:hidden text-ball-primary"
+                        className="relative z-50 text-xs uppercase tracking-[0.3em] text-ball-primary md:hidden"
                         onClick={() => setMenuOpen((prev) => !prev)}
                     >
-                        {menuOpen ? "\u2715" : "\u2630"}
+                        {menuOpen ? "Close" : "Menu"}
                     </div>
 
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden items-center gap-8 md:flex">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="text-ball-primary hover:opacity-50 transition-opacity duration-300"
+                                className="text-xs uppercase tracking-[0.24em] text-ball-primary/70 transition-colors duration-300 hover:text-ball-primary"
                             >
                                 {link.name}
                             </a>
@@ -49,7 +46,7 @@ export const Navbar = () => {
             </div>
 
             <div
-                className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.9)] z-40 flex flex-col items-center justify-center transition-all duration-300 ${menuOpen ? "h-screen opacity-100 pointer-events-auto" : "h-0 opacity-0 pointer-events-none"
+                className={`fixed inset-0 z-40 flex flex-col items-center justify-center bg-ball-white transition-all duration-300 ${menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                     }`}
             >
                 {navLinks.map((link) => (
@@ -57,7 +54,7 @@ export const Navbar = () => {
                         key={link.name}
                         href={link.href}
                         onClick={() => setMenuOpen(false)}
-                        className="text-2xl font-bold text-white my-4 hover:opacity-50 transition-opacity duration-300"
+                        className="my-4 text-2xl uppercase tracking-[0.18em] text-ball-primary transition-opacity duration-300 hover:opacity-50"
                     >
                         {link.name}
                     </a>

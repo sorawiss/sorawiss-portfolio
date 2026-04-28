@@ -1,11 +1,7 @@
-import React from 'react'
-
 function Skill( {tech}: {tech: string} ) {
     return (
         <span
-            className="bg-primary/10 text-primary py-1 px-3 rounded-full text-sm hover:bg-primary/20 
-                                    hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition
-                    "
+            className="border border-black/10 px-3 py-1 text-[0.7rem] uppercase tracking-[0.16em] text-ball-primary/65 transition-colors duration-300 hover:border-black hover:text-ball-primary"
         >
             {tech}
         </span>
