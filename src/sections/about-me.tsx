@@ -6,48 +6,42 @@ export const About = () => {
             id="about"
             className="page-shell py-20 md:py-28"
         >
-            <div className="swiss-grid grid-rule pt-8">
-                <RevealOnScroll className="md:col-span-4">
-                    <div className="space-y-4">
-                        <p className="section-kicker">About</p>
-                        <h2 className="section-title">
-                            Human-centered
-                            <span className="block text-ball-primary/25">systems</span>
-                        </h2>
-                    </div>
+            <div className="grid gap-12 lg:grid-cols-[14rem_minmax(0,1fr)] lg:gap-16">
+                <RevealOnScroll>
+                    <p className="section-kicker">About</p>
                 </RevealOnScroll>
 
-                <RevealOnScroll delay={0.15} className="md:col-span-8">
-                    <div className="editorial-card p-6 md:p-10">
-                        <p className="section-copy max-w-3xl">
-                            Third-year student in Computer Science and Political Science focused on the
-                            meeting point between engineering, interface design, and human behavior.
-                            I care about making products that feel rigorous in structure and clear in use,
-                            while still carrying emotional intelligence.
+                <div className="space-y-12">
+                    <RevealOnScroll delay={0.08}>
+                        <p className="max-w-4xl text-balance text-3xl font-medium leading-[1.2] tracking-[-0.05em] text-ball-primary md:text-5xl">
+                            I work between frontend engineering, product design, and visual storytelling,
+                            with a focus on making technology feel calm, useful, and human.
                         </p>
+                    </RevealOnScroll>
 
-                        <div className="mt-10 grid gap-6 md:grid-cols-3">
-                            <div className="border-t border-black/10 pt-4">
-                                <p className="display-index mb-3">01 Discipline</p>
-                                <p className="text-sm leading-7 text-ball-primary/70">
-                                    Frontend engineering, product thinking, and interface systems.
+                    <RevealOnScroll delay={0.14}>
+                        <div className="grid gap-6 border-t border-black/8 pt-6 md:grid-cols-3">
+                            <div>
+                                <p className="display-index mb-4">Craft</p>
+                                <p className="text-sm leading-7 text-ball-primary/68">
+                                    Frontend systems, interface polish, and product thinking grounded in use.
                                 </p>
                             </div>
-                            <div className="border-t border-black/10 pt-4">
-                                <p className="display-index mb-3">02 Interest</p>
-                                <p className="text-sm leading-7 text-ball-primary/70">
-                                    UX, social science, psychology, and how people trust technology.
+                            <div>
+                                <p className="display-index mb-4">Curiosity</p>
+                                <p className="text-sm leading-7 text-ball-primary/68">
+                                    Psychology, social science, and how people emotionally respond to software.
                                 </p>
                             </div>
-                            <div className="border-t border-black/10 pt-4">
-                                <p className="display-index mb-3">03 Approach</p>
-                                <p className="text-sm leading-7 text-ball-primary/70">
-                                    Use a clear grid, reduce noise, and let content carry the weight.
+                            <div>
+                                <p className="display-index mb-4">Taste</p>
+                                <p className="text-sm leading-7 text-ball-primary/68">
+                                    Quiet hierarchy, careful spacing, and details that do not compete with content.
                                 </p>
                             </div>
                         </div>
-                    </div>
-                </RevealOnScroll>
+                    </RevealOnScroll>
+                </div>
             </div>
         </section>
     );

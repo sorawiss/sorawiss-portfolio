@@ -1,54 +1,72 @@
 import { RevealOnScroll } from "../components/reveal-onscroll";
+import { MoveRight } from "lucide-react";
 
 export const Home = () => {
   return (
     <section
       id="home"
-      className="page-shell flex min-h-screen items-center pt-24 pb-16"
+      className="page-shell flex min-h-screen items-center pt-52 pb-24 relative overflow-hidden"
     >
-      <div className="swiss-grid w-full items-end">
-        <RevealOnScroll variant="fadeInUp" className="md:col-span-7">
-          <div className="space-y-6">
-            <p className="section-kicker">Portfolio 2026</p>
-            <h1 className="text-[4.25rem] font-medium uppercase leading-[0.84] tracking-[-0.1em] text-ball-primary sm:text-[6rem] md:text-[7.5rem] lg:text-[9.5rem]">
-              Sorawiss
-              <span className="block text-ball-primary/22">Bunnee</span>
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-ball-primary/[0.03] via-transparent to-transparent"></div>
+      
+      <div className="w-full flex flex-col gap-16 md:gap-24">
+    
+
+        <div className="flex flex-col gap-8 md:gap-12">
+          <RevealOnScroll variant="fadeInUp" delay={0.1}>
+            <h1 className="text-balance text-center text-[3.5rem] font-medium leading-[0.95] tracking-[-0.03em] text-ball-primary sm:text-[5rem] md:text-[6.5rem] lg:text-[8rem]">
+              Designing for <span className="text-ball-primary/40 italic font-serif">clarity.</span><br />
+              Engineering for <span className="relative inline-block">
+                scale.
+                <span className="absolute bottom-2 left-0 h-[0.1em] w-full bg-ball-accent/20 -z-10"></span>
+              </span>
             </h1>
+          </RevealOnScroll>
+
+          <RevealOnScroll variant="fadeInUp" delay={0.2}>
+             <p className="text-center max-w-2xl mx-auto text-lg md:text-xl leading-relaxed text-ball-primary/60 font-light">
+              I am a product designer and frontend developer based in Bangkok. 
+              I specialize in transforming complex problems into elegant, intuitive digital experiences.
+            </p>
+          </RevealOnScroll>
+        </div>
+
+        <RevealOnScroll variant="fadeInUp" delay={0.3}>
+          <div className="flex flex-wrap justify-center items-center gap-4">
+            <a
+              href="#projects"
+              className="group relative inline-flex items-center gap-3 rounded-full bg-ball-primary px-8 py-4 text-sm uppercase tracking-[0.15em] text-ball-white overflow-hidden transition-transform hover:scale-[1.02]"
+            >
+              <span className="relative z-10 font-medium">Explore Work</span>
+              <MoveRight className="relative z-10 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <div className="absolute inset-0 h-full w-0 bg-ball-accent transition-all duration-500 ease-out group-hover:w-full z-0"></div>
+            </a>
+            <a
+              href="mailto:sorawit.bunnee@gmail.com"
+              className="group inline-flex items-center gap-2 rounded-full border border-black/10 px-8 py-4 text-sm uppercase tracking-[0.15em] text-ball-primary transition-all hover:border-black/30 hover:bg-black/[0.02]"
+            >
+              <span className="font-medium">Let's Talk</span>
+            </a>
           </div>
         </RevealOnScroll>
-
-        <RevealOnScroll variant="fadeInUp" delay={0.15} className="md:col-span-5">
-          <div className="editorial-card space-y-8 p-6 md:p-8">
-            <div className="label-row border-t-0 py-0 pb-4">
-              <span>Code</span>
-              <span>Design</span>
-              <span>Systems</span>
+        
+        <RevealOnScroll variant="fadeInUp" delay={0.4}>
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 border-t border-black/8 pt-12">
+            <div className="flex flex-col gap-2">
+              <span className="text-3xl md:text-4xl font-medium tracking-tight">5+</span>
+              <span className="text-[0.65rem] font-mono uppercase tracking-[0.2em] text-ball-primary/45">Years Exp.</span>
             </div>
-
-            <p className="max-w-xl text-lg leading-8 text-ball-primary/78 md:text-xl">
-              Product-minded developer building digital experiences with strong visual
-              structure, clear interaction, and engineering discipline.
-            </p>
-
-            <div className="grid gap-4 sm:grid-cols-2">
-              <a
-                href="#projects"
-                className="border border-black px-4 py-4 text-sm uppercase tracking-[0.18em] transition-colors duration-300 hover:bg-black hover:text-ball-white"
-              >
-                View Projects
-              </a>
-              <a
-                href="mailto:sorawit.bunnee@gmail.com"
-                className="border border-black/12 px-4 py-4 text-sm uppercase tracking-[0.18em] text-ball-primary/70 transition-colors duration-300 hover:border-black hover:text-ball-primary"
-              >
-                Start A Conversation
-              </a>
+            <div className="flex flex-col gap-2">
+              <span className="text-3xl md:text-4xl font-medium tracking-tight">40+</span>
+              <span className="text-[0.65rem] font-mono uppercase tracking-[0.2em] text-ball-primary/45">Projects</span>
             </div>
-
-            <div className="grid gap-3 border-t border-black/10 pt-4 font-mono text-xs uppercase tracking-[0.22em] text-ball-primary/52 sm:grid-cols-3">
-              <span>Bangkok</span>
-              <span>Web / Product</span>
-              <span>Available For Select Work</span>
+            <div className="flex flex-col gap-2">
+              <span className="text-3xl md:text-4xl font-medium tracking-tight">100%</span>
+              <span className="text-[0.65rem] font-mono uppercase tracking-[0.2em] text-ball-primary/45">Commitment</span>
+            </div>
+            <div className="flex flex-col gap-2">
+              <span className="text-3xl md:text-4xl font-medium tracking-tight">BKK</span>
+              <span className="text-[0.65rem] font-mono uppercase tracking-[0.2em] text-ball-primary/45">Location</span>
             </div>
           </div>
         </RevealOnScroll>

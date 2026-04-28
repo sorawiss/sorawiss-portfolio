@@ -9,7 +9,6 @@ import WorkImages from '../sections/work-images'
 function App() {
   return (
     <main className='relative overflow-hidden'>
-      <div className='pointer-events-none fixed inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-black/8 lg:block' />
       <Navbar />
       <Home />
       <About />

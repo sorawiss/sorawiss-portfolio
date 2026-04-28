@@ -1,4 +1,5 @@
 'use client'
+
 import { useEffect, useState } from "react";
 
 const navLinks = [
@@ -17,26 +18,27 @@ export const Navbar = () => {
     }, [menuOpen]);
 
     return (
-        <nav className="fixed inset-x-0 top-0 z-50 border-b border-black/10 bg-ball-white/80 backdrop-blur-xl">
+        <nav className="fixed inset-x-0 top-0 z-50 border-b border-black/8 bg-ball-white/92 backdrop-blur-sm">
             <div className="page-shell">
                 <div className="flex h-16 items-center justify-between">
-                    <a href="#home" className="font-mono text-xs uppercase tracking-[0.3em] text-ball-primary">
+                    <a href="#home" className="font-mono text-xs uppercase tracking-[0.28em] text-ball-primary">
                         Sorawiss
                     </a>
 
-                    <div
-                        className="relative z-50 text-xs uppercase tracking-[0.3em] text-ball-primary md:hidden"
+                    <button
+                        type="button"
+                        className="relative z-50 text-xs uppercase tracking-[0.28em] text-ball-primary md:hidden"
                         onClick={() => setMenuOpen((prev) => !prev)}
                     >
                         {menuOpen ? "Close" : "Menu"}
-                    </div>
+                    </button>
 
                     <div className="hidden items-center gap-8 md:flex">
                         {navLinks.map((link) => (
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="text-xs uppercase tracking-[0.24em] text-ball-primary/70 transition-colors duration-300 hover:text-ball-primary"
+                                className="text-xs uppercase tracking-[0.18em] text-ball-primary/60 transition-colors duration-300 hover:text-ball-primary"
                             >
                                 {link.name}
                             </a>
@@ -54,7 +56,7 @@ export const Navbar = () => {
                         key={link.name}
                         href={link.href}
                         onClick={() => setMenuOpen(false)}
-                        className="my-4 text-2xl uppercase tracking-[0.18em] text-ball-primary transition-opacity duration-300 hover:opacity-50"
+                        className="my-4 text-2xl tracking-[-0.04em] text-ball-primary transition-opacity duration-300 hover:opacity-55"
                     >
                         {link.name}
                     </a>
