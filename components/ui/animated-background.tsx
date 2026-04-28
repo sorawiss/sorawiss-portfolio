@@ -60,9 +60,6 @@ export default function AnimatedBackground({
       child,
       {
         key: index,
-        className: cn('relative inline-flex', typedChild.props.className),
-        'aria-selected': activeId === id,
-        'data-checked': activeId === id ? 'true' : 'false',
         ...interactionProps,
       },
       <>
