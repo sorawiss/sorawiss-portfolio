@@ -7,7 +7,8 @@ export const Contact = () => {
             className="page-shell py-24 md:py-32"
         >
             <RevealOnScroll>
-                <div className="border-t border-black/8 pt-10">
+                <section className="border-t border-black/8 pt-10"
+                    id="contact">
                     <div className="mx-auto max-w-4xl text-center">
                         <p className="section-kicker">Contact</p>
                         <h2 className="mt-4 text-balance text-4xl font-medium leading-[0.95] tracking-[-0.08em] text-ball-primary md:text-7xl">
@@ -32,7 +33,7 @@ export const Contact = () => {
                             </a>
                         </div>
                     </div>
-                </div>
+                </section>
             </RevealOnScroll>
         </section>
     );

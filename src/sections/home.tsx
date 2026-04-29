@@ -34,15 +34,17 @@ export const Home = () => {
         <RevealOnScroll variant="fadeInUp" delay={0.3}>
           <div className="flex flex-wrap justify-center items-center gap-4">
             <a
-              href="#projects"
+              href="https://drive.google.com/file/d/1ByUBygQVeItuemA6atLokNsRzaQURVR8/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative inline-flex items-center gap-3 rounded-full bg-ball-primary px-8 py-4 text-sm uppercase tracking-[0.15em] text-ball-white overflow-hidden transition-transform hover:scale-[1.02]"
             >
-              <span className="relative z-10 font-medium">Explore Work</span>
+              <span className="relative z-10 font-medium">My Resume</span>
               <MoveRight className="relative z-10 w-4 h-4 transition-transform group-hover:translate-x-1" />
-              <div className="absolute inset-0 h-full w-0 bg-ball-accent transition-all duration-500 ease-out group-hover:w-full z-0"></div>
+              <div className="absolute inset-0 h-full w-0 bg-ball-accent/60 transition-all duration-500 ease-out group-hover:w-full z-0"></div>
             </a>
             <a
-              href="mailto:sorawit.bunnee@gmail.com"
+              href="#contact"
               className="group inline-flex items-center gap-2 rounded-full border border-black/10 px-8 py-4 text-sm uppercase tracking-[0.15em] text-ball-primary transition-all hover:border-black/30 hover:bg-black/[0.02]"
             >
               <span className="font-medium">Let's Talk</span>
@@ -53,20 +55,20 @@ export const Home = () => {
         <RevealOnScroll variant="fadeInUp" delay={0.4}>
           <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 border-t border-black/8 pt-12">
             <div className="flex flex-col gap-2">
-              <span className="text-3xl md:text-4xl font-medium tracking-tight">5+</span>
+              <span className="text-3xl md:text-4xl font-medium tracking-tight">2+</span>
               <span className="text-[0.65rem] font-mono uppercase tracking-[0.2em] text-ball-primary/45">Years Exp.</span>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="text-3xl md:text-4xl font-medium tracking-tight">40+</span>
+              <span className="text-3xl md:text-4xl font-medium tracking-tight">20+</span>
               <span className="text-[0.65rem] font-mono uppercase tracking-[0.2em] text-ball-primary/45">Projects</span>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="text-3xl md:text-4xl font-medium tracking-tight">100%</span>
-              <span className="text-[0.65rem] font-mono uppercase tracking-[0.2em] text-ball-primary/45">Commitment</span>
+              <span className="text-2xl md:text-3xl font-medium tracking-tight">Thammasat</span>
+              <span className="text-[0.65rem] font-mono uppercase tracking-[0.2em] text-ball-primary/45">University</span>
             </div>
             <div className="flex flex-col gap-2">
-              <span className="text-3xl md:text-4xl font-medium tracking-tight">BKK</span>
-              <span className="text-[0.65rem] font-mono uppercase tracking-[0.2em] text-ball-primary/45">Location</span>
+              <span className="text-2xl md:text-3xl font-medium tracking-tight">Ramkamhang</span>
+              <span className="text-[0.65rem] font-mono uppercase tracking-[0.2em] text-ball-primary/45">University</span>
             </div>
           </div>
         </RevealOnScroll>

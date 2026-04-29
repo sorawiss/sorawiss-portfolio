@@ -10,9 +10,9 @@ const works = [
     url: "https://www.everythai.com/"
   },
   {
-    name: "nithan",
-    img: "/works/nithan.png",
-    url: "https://www.nithanherb.com/"
+    name: "skylab",
+    img: "/works/skylab.svg",
+    url: "https://www.skylabbkk.com/"
   },
   {
     name: "nsm",
