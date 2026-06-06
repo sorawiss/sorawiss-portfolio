@@ -47,7 +47,7 @@ export const Home = () => {
               href="#contact"
               className="group inline-flex items-center gap-2 rounded-full border border-black/10 px-8 py-4 text-sm uppercase tracking-[0.15em] text-ball-primary transition-all hover:border-black/30 hover:bg-black/[0.02]"
             >
-              <span className="font-medium">Let's Talk</span>
+              <span className="font-medium">Let&apos;s Talk</span>
             </a>
           </div>
         </RevealOnScroll>

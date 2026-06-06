@@ -2,9 +2,9 @@ import { Home } from '../sections/home'
 import { Navbar } from '../sections/navbar'
 import { Contact } from '../sections/contact'
 import { About } from '../sections/about-me'
+import TechStack from '../sections/tech-stack'
 import Works from '../sections/works'
 import PersonalProjects from '../sections/personal-projects'
-import WorkImages from '../sections/work-images'
 
 function App() {
   return (
@@ -12,9 +12,9 @@ function App() {
       <Navbar />
       <Home />
       <About />
+      <TechStack />
       <Works />
       <PersonalProjects />
-      <WorkImages />
       <Contact />
     </main>
   )
