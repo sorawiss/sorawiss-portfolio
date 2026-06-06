@@ -20,6 +20,11 @@ const works = [
     url: "https://www.nsm.co.th/"
   },
   {
+    name: "TCP",
+    img: "/works/tcp.png",
+    url: "https://www.tcp.com/"
+  },
+  {
     name: "wam-product",
     img: "/works/wam-product.png",
     url: "https://www.wamproduct.com/"
