@@ -24,9 +24,9 @@ export const Home = () => {
           </RevealOnScroll>
 
           <RevealOnScroll variant="fadeInUp" delay={0.2}>
-             <p className="text-center max-w-2xl mx-auto text-lg md:text-xl leading-relaxed text-ball-primary/60 font-light">
-              I am a product designer and frontend developer based in Bangkok. 
-              I specialize in transforming complex problems into elegant, intuitive digital experiences.
+            <p className="text-center max-w-2xl mx-auto text-lg md:text-xl leading-relaxed text-ball-primary/60 font-light">
+              I am a full stack developer based in Bangkok. 
+              I am passionate about psychology and people, and I specialize in transforming complex problems into elegant, intuitive digital experiences.
             </p>
           </RevealOnScroll>
         </div>

@@ -11,7 +11,7 @@ export default function PersonalProjects() {
         <div>
           <p className="section-kicker">Projects</p>
           <h2 className="mt-3 text-balance text-4xl font-medium leading-[0.95] tracking-[-0.07em] text-ball-primary md:text-6xl">
-            Selected work
+            Personal project
           </h2>
         </div>
         <p className="max-w-md text-sm leading-7 text-ball-primary/60">
